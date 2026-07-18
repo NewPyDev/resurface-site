@@ -1,0 +1,110 @@
+:root {
+  --depth: #101B18;
+  --depth-soft: #172622;
+  --surface-line: #24352F;
+  --amber: #D6A84F;
+  --amber-dim: #9C7E3F;
+  --ink: #EDE6D8;
+  --ink-dim: #A8AA9F;
+  --sage: #7C9885;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--depth);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 24px 100px;
+}
+
+.brand {
+  font-family: Georgia, serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--amber);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.updated {
+  color: var(--ink-dim);
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 36px;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+p, li {
+  color: var(--ink-dim);
+  font-size: 15px;
+}
+
+a {
+  color: var(--amber);
+}
+
+.price-card {
+  background: var(--depth-soft);
+  border: 1px solid var(--surface-line);
+  border-radius: 16px;
+  padding: 28px;
+  margin: 32px 0;
+}
+
+.price-amount {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.price-amount span {
+  font-size: 15px;
+  color: var(--ink-dim);
+  font-weight: 400;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.feature-list li {
+  padding: 6px 0;
+  color: var(--ink);
+  font-size: 14.5px;
+}
+
+.feature-list li::before {
+  content: "✓ ";
+  color: var(--amber);
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 60px;
+  border-top: 1px solid var(--surface-line);
+  padding-top: 20px;
+  color: var(--ink-dim);
+  font-size: 13px;
+}
