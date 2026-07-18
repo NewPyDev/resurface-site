@@ -5,7 +5,10 @@
 
 const { Redis } = require("@upstash/redis");
 
-const redis = Redis.fromEnv();
+const redis = new Redis({
+  url: process.env.ntfset_01kxtzzjsmxbxy77takqbg2d27_KV_REST_API_URL,
+  token: process.env.ntfset_01kxtzzjsmxbxy77takqbg2d27_KV_REST_API_TOKEN,
+});
 
 module.exports = async (req, res) => {
   const email = (req.query.email || "").toLowerCase().trim();
