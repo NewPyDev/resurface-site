@@ -7,9 +7,13 @@
 const crypto = require("crypto");
 const { Redis } = require("@upstash/redis");
 
-// Reads UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN from env vars,
-// which Vercel auto-injects once you add the Upstash integration.
-const redis = Redis.fromEnv();
+// Reads the Upstash REST URL/token from the exact env var names Vercel's
+// marketplace integration created (these are namespaced with the resource
+// ID, so they won't match the generic UPSTASH_REDIS_REST_URL/TOKEN names).
+const redis = new Redis({
+  url: process.env.ntfset_01kxtzzjsmxbxy77takqbg2d27_KV_REST_API_URL,
+  token: process.env.ntfset_01kxtzzjsmxbxy77takqbg2d27_KV_REST_API_TOKEN,
+});
 
 // We need the raw, unparsed body to verify Paddle's signature, so we
 // disable Vercel's automatic body parsing for this function.
